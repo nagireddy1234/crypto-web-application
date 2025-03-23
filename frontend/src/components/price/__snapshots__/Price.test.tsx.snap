@@ -1,0 +1,109 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Price Component > Snapshot test 1`] = `
+<div>
+  <div
+    class="container flex justify-between items-center mx-auto px-6 pt-10 pb-14 max-w-7xl"
+  >
+    <div>
+      <div
+        class="flex items-center gap-3 mb-6"
+      >
+        <img
+          alt="Logo"
+          class="h-6 w-6 rounded-full shadow-lg"
+          src="crypto.svg"
+          style="transform: rotate(45deg); box-shadow: 0 4px 8px rgba(0, 255, 0, 0.3), 0 0 15px rgba(0, 255, 0, 0.5);"
+        />
+        <h2
+          class="text-white text-lg font-bold"
+        >
+          Crypto Converter
+        </h2>
+      </div>
+    </div>
+    <a
+      class="text-blue-500 hover:underline hover:text-blue-400 transition duration-200 ease-in-out"
+      href="/history"
+    >
+      History
+    </a>
+  </div>
+  <div
+    class="flex justify-center mb-8 space-x-6"
+  >
+    <label
+      class="cursor-pointer text-white text-lg p-2 rounded-md transition-colors duration-200 bg-blue-500"
+    >
+      <input
+        checked=""
+        class="hidden"
+        name="currency"
+        type="radio"
+        value="TON/USDT"
+      />
+      <span>
+        TON/USDT
+      </span>
+    </label>
+    <label
+      class="cursor-pointer text-white text-lg p-2 rounded-md transition-colors duration-200 bg-gray-700 hover:bg-gray-600"
+    >
+      <input
+        class="hidden"
+        name="currency"
+        type="radio"
+        value="ETH/BTC"
+      />
+      <span>
+        ETH/BTC
+      </span>
+    </label>
+    <label
+      class="cursor-pointer text-white text-lg p-2 rounded-md transition-colors duration-200 bg-gray-700 hover:bg-gray-600"
+    >
+      <input
+        class="hidden"
+        name="currency"
+        type="radio"
+        value="BTC/USDT"
+      />
+      <span>
+        BTC/USDT
+      </span>
+    </label>
+  </div>
+  <div
+    class="grid md:grid-cols-2 gap-10 max-w-7xl p-4 mx-auto my-12"
+  >
+    <div
+      class="bg-gradient-to-br from-blue-600 to-green-500 p-6 rounded-lg shadow-xl transition-transform duration-300 ease-out transform hover:scale-105 hover:shadow-2xl"
+    >
+      <h2
+        class="text-lg font-semibold text-white tracking-wide mb-2"
+      >
+        TONUSDT
+      </h2>
+      <p
+        class="text-4xl font-extrabold text-white tracking-tight"
+      >
+        1.230000
+      </p>
+    </div>
+    <div
+      class="bg-gradient-to-br from-blue-600 to-green-500 p-6 rounded-lg shadow-xl transition-transform duration-300 ease-out transform hover:scale-105 hover:shadow-2xl"
+    >
+      <h2
+        class="text-lg font-semibold text-white tracking-wide mb-2"
+      >
+        USDTTON
+      </h2>
+      <p
+        class="text-4xl font-extrabold text-white tracking-tight"
+      >
+        0.810000
+      </p>
+    </div>
+  </div>
+</div>
+`;

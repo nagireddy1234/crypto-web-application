@@ -1,0 +1,1 @@
+export { getMarketAnalytics } from "./analyticsController";

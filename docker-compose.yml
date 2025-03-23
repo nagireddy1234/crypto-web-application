@@ -1,0 +1,58 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:5001
+      - VITE_ENV=dev
+      - VITE_QUERY_CACHE_TIME=1800000
+    depends_on:
+      - backend
+    networks:
+      - default
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "5001:5001"
+    environment:
+      - PORT=5001
+      - PRICING_SERVICE_API=https://api.binance.com/api/v3/ticker/price
+      - ANALYTICS_SERVICE_API=https://api.binance.com/api/v3/klines
+      - DBSTRING=mongodb://mongo:27017/
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_TTL=1800
+    depends_on:
+      - mongo
+      - redis
+    networks:
+      - default
+
+  mongo:
+    image: mongo:latest
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - default
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - default
+
+volumes:
+  mongo-data:
+
+networks:
+  default:
+    driver: bridge
